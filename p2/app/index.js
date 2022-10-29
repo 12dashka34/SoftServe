@@ -24,12 +24,14 @@ console.log("");
 
 function t2(){  
 let a = prompt("insert value");
-let rez1 = (((a%2)==0)&&(a>0));
-let rez2 = ((a%7)==0);
+console.log("task 2");
+((a%2)==0)?
+(a>0)? console.log("even, positive "):console.log("even, negative "):
+(a>0)? console.log("not an even, positive "):console.log("not an even, negative ");
+((a%7)==0)? console.log("a multiple of 7 "):console.log("not multiple of 7 ");
 
-	console.log("task 2");
-	console.log("even positive ", rez1);
-	console.log("a multiple of 7 ", rez2);
+
+	
 	console.log("  ");
 }
 
@@ -95,16 +97,16 @@ function t7(){
 	now= new Date();        
     hours= now.getHours();
 
-	hours<6? console.log("Good night") :
-	hours<12? console.log("Good morning"):
-	hours<18? console.log("Good day"):
+	(hours==23)||(hours<5)? console.log("Good night") :
+	hours<11? console.log("Good morning"):
+	hours<17? console.log("Good day"):
 	console.log("Good evening");
 
 	switch(true){
-    case hours<6 : console.log("Good night"); break;
-	case hours<12 : console.log("Good morning"); break;
-	case hours<18: console.log("Good day"); break;
-	case hours<24: console.log("Good evening"); break;
+    case (hours==23)||(hours<5) : console.log("Good night"); break;
+	case hours<11 : console.log("Good morning"); break;
+	case hours<17: console.log("Good day"); break;
+	case hours<23: console.log("Good evening"); break;
 
 	}
 	console.log("");
